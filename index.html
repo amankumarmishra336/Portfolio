@@ -1,262 +1,284 @@
-<!doctype html>
-<html>
-  <head>
-    <title>My Portfolio</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f4f4f4;
-        transition:
-          background-color 0.3s,
-          color 1s;
-      }
-      body.dark-mode {
-        background-color: #1a1a1a;
-        color: #f0f0f0;
-      }
-      .controls {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-      }
-      .dark-mode-btn,
-      .scroll-btn {
-        padding: 10px 15px;
-        margin: 5px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: all 0.3s;
-      }
-      .dark-mode-btn {
-        background: #667eea;
-        color: white;
-      }
-      .dark-mode-btn:hover {
-        background: #764ba2;
-        transform: scale(1.05);
-      }
-      header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        text-align: center;
-        padding: 60px 20px;
-        transition: all 0.3s;
-      }
-      body.dark-mode header {
-        background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-      }
-      header h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
-      }
-      header p {
-        font-size: 18px;
-        font-style: italic;
-      }
-      section {
-        max-width: 800px;
-        margin: 30px auto;
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s;
-      }
-      body.dark-mode section {
-        background: #2d2d2d;
-        box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-      }
-      section h2 {
-        color: #667eea;
-        font-size: 28px;
-        margin-bottom: 15px;
-        border-bottom: 2px solid #667eea;
-        padding-bottom: 10px;
-      }
-      body.dark-mode section h2 {
-        color: #a8aff0;
-      }
-      section p {
-        font-size: 14px;
-        line-height: 1.8;
-        margin-bottom: 10px;
-      }
-      ul {
-        margin-left: 20px;
-        margin-top: 10px;
-      }
-      li {
-        font-size: 14px;
-        margin: 8px 0;
-        padding: 5px 0;
-      }
-      .skill-item {
-        display: inline-block;
-        background: #667eea;
-        color: white;
-        padding: 8px 15px;
-        margin: 5px;
-        border-radius: 20px;
-        font-size: 13px;
-        transition: all 0.3s;
-      }
-      .skill-item:hover {
-        background: #764ba2;
-        transform: translateY(-3px);
-      }
-      a {
-        color: #667eea;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      a:hover {
-        text-decoration: underline;
-        color: #764ba2;
-      }
-      body.dark-mode a {
-        color: #a8aff0;
-      }
-      .counter {
-        text-align: center;
-        padding: 20px;
-        background: #f0f0f0;
-        border-radius: 10px;
-        margin: 20px 0;
-        transition: all 0.3s;
-      }
-      body.dark-mode .counter {
-        background: #3d3d3d;
-      }
-      .counter-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-        background: #667eea;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-        transition: all 0.3s;
-      }
-      .counter-btn:hover {
-        background: #764ba2;
-        transform: scale(1.05);
-      }
-      footer {
-        text-align: center;
-        padding: 20px;
-        color: #666;
-        font-size: 12px;
-        transition: all 0.3s;
-      }
-      body.dark-mode footer {
-        color: #999;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="controls">
-      <button class="dark-mode-btn" onclick="toggleDarkMode()">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aman Kumar Mishra | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+    transition:0.3s;
+}
+
+body.dark-mode{
+    background:#1a1a1a;
+    color:#f0f0f0;
+}
+
+.controls{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:1000;
+}
+
+.dark-mode-btn{
+    padding:10px 15px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#667eea;
+    color:white;
+    font-weight:bold;
+}
+
+.dark-mode-btn:hover{
+    background:#764ba2;
+}
+
+header{
+    text-align:center;
+    color:white;
+    padding:70px 20px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+body.dark-mode header{
+    background:linear-gradient(135deg,#2d2d2d,#111);
+}
+
+header h1{
+    font-size:45px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+section{
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.dark-mode section{
+    background:#2d2d2d;
+}
+
+h2{
+    color:#667eea;
+    margin-bottom:15px;
+    border-bottom:2px solid #667eea;
+    padding-bottom:10px;
+}
+
+.skill-item{
+    display:inline-block;
+    background:#667eea;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    margin:5px;
+}
+
+.counter{
+    text-align:center;
+    padding:20px;
+    background:#f0f0f0;
+    border-radius:10px;
+}
+
+body.dark-mode .counter{
+    background:#3d3d3d;
+}
+
+.btn{
+    padding:10px 20px;
+    background:#667eea;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:10px;
+}
+
+.btn:hover{
+    background:#764ba2;
+}
+
+a{
+    color:#667eea;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<div class="controls">
+    <button class="dark-mode-btn" onclick="toggleDarkMode()" id="themeBtn">
         🌙 Dark Mode
-      </button>
+    </button>
+</div>
+
+<header>
+    <h1>AMAN KUMAR MISHRA</h1>
+    <p>B.Tech CSE Student | Java Learner | Web Development Enthusiast</p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+
+    <p>
+        Hello! I'm Aman Kumar Mishra, a B.Tech Computer Science student.
+        I am passionate about coding, problem solving, web development,
+        and continuously learning new technologies.
+    </p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+
+    <span class="skill-item">HTML</span>
+    <span class="skill-item">CSS</span>
+    <span class="skill-item">JavaScript</span>
+    <span class="skill-item">Python</span>
+    <span class="skill-item">C++</span>
+</section>
+
+<section>
+    <h2>Projects</h2>
+
+    <h3>Personal Portfolio Website</h3>
+    <p>
+        Developed using HTML, CSS and JavaScript.
+        Features Dark Mode and Visitor Counter.
+    </p>
+
+    <br>
+
+    <h3>Student Management System</h3>
+    <p>
+        Console-based project using C++ concepts like arrays,
+        functions and file handling.
+    </p>
+</section>
+
+<section>
+    <h2>Visitor Counter</h2>
+
+    <div class="counter">
+        <h3>
+            Visitors: <span id="counter-display">0</span>
+        </h3>
     </div>
-    <header>
-      <h1>AMAN KUMAR MISHRA</h1>
-      <p>BTech CSE Student | Learning Web Development</p>
-    </header>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Hi! I'm a 2nd year BTech CSE student passionate about building web
-        applications. I love learning new technologies and turning ideas into
-        reality.
-      </p>
-    </section>
-    <section>
-      <h2>Skills</h2>
-      <div>
-        <span class="skill-item">HTML</span>
-        <span class="skill-item">CSS</span>
-        <span class="skill-item">JavaScript</span>
-        <span class="skill-item">Python</span>
-        <span class="skill-item">C++</span>
-      </div>
-    </section>
-    <section>
-      <h2>Visitor Counter</h2>
-      <div class="counter">
-        <p>
-          You've visited this page <span id="counter-display">0</span> times
-        </p>
-        <button class="counter-btn" onclick="incrementCounter()">
-          Click to count your visits
-        </button>
-        <button
-          class="counter-btn"
-          onclick="resetCounter()"
-          style="background: #e74c3c; margin-left: 10px"
-        >
-          Reset
-        </button>
-      </div>
-    </section>
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:amankumarmishra336@gmail.com">My email</a></p>
-      <p>
+</section>
+
+<section>
+    <h2>Resume</h2>
+
+    <p>Upload your resume file in the same folder and rename it to resume.pdf</p>
+
+    <a href="resume.pdf" download class="btn">
+        Download Resume
+    </a>
+</section>
+
+<section>
+    <h2>Contact</h2>
+
+    <p>
+        Email:
+        <a href="mailto:amankumarmishra336@gmail.com">
+            amankumarmishra336@gmail.com
+        </a>
+    </p>
+
+    <br>
+
+    <p>
         LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/aman-kumar-mishra-603291353/"
-          target="_blank"
-          >Visit my LinkedIn</a
-        >
-      </p>
-      <p>
+        <a href="https://www.linkedin.com/in/aman-kumar-mishra-603291353/" target="_blank">
+            Visit LinkedIn
+        </a>
+    </p>
+
+    <br>
+
+    <p>
         GitHub:
-        <a href="https://github.com/amankumarmishra336" target="_blank"
-          >Visit my GitHub</a
-        >
-      </p>
-    </section>
-    <footer><p>© 2025 AMAN KUMAR MISHRA. All rights reserved.</p></footer>
-    <script>
-      function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-        if (document.body.classList.contains("dark-mode")) {
-          localStorage.setItem("darkMode", "true");
-        } else {
-          localStorage.setItem("darkMode", "false");
-        }
-      }
-      if (localStorage.getItem("darkMode") === "true") {
-        document.body.classList.add("dark-mode");
-      }
-      let visitCount = localStorage.getItem("visitCount");
-      if (visitCount === null) {
-        visitCount = 0;
-      } else {
-        visitCount = parseInt(visitCount);
-      }
-      function incrementCounter() {
-        visitCount++;
-        document.getElementById("counter-display").textContent = visitCount;
-        localStorage.setItem("visitCount", visitCount);
-      }
-      function resetCounter() {
-        visitCount = 0;
-        document.getElementById("counter-display").textContent = visitCount;
-        localStorage.setItem("visitCount", visitCount);
-      }
-      document.getElementById("counter-display").textContent = visitCount;
-    </script>
-  </body>
+        <a href="https://github.com/amankumarmishra336" target="_blank">
+            Visit GitHub
+        </a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Aman Kumar Mishra. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+function toggleDarkMode() {
+
+    document.body.classList.toggle("dark-mode");
+
+    const btn = document.getElementById("themeBtn");
+
+    if(document.body.classList.contains("dark-mode")){
+        btn.innerHTML="☀️ Light Mode";
+        localStorage.setItem("darkMode","true");
+    }
+    else{
+        btn.innerHTML="🌙 Dark Mode";
+        localStorage.setItem("darkMode","false");
+    }
+}
+
+if(localStorage.getItem("darkMode")==="true"){
+    document.body.classList.add("dark-mode");
+    document.getElementById("themeBtn").innerHTML="☀️ Light Mode";
+}
+
+let visitCount = localStorage.getItem("visitCount");
+
+if(visitCount===null){
+    visitCount=0;
+}
+
+visitCount++;
+
+localStorage.setItem("visitCount",visitCount);
+
+document.getElementById("counter-display").textContent=visitCount;
+
+</script>
+
+</body>
 </html>
